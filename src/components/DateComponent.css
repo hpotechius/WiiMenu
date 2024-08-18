@@ -1,0 +1,17 @@
+.date {
+    position: absolute;
+    color: #9b9b9b;
+    /* background-color: red; */
+    font-size: 5vw;
+    opacity: 0.5;
+    left: 35vw;
+    bottom: 0;
+    width: 30vw;
+    height: 12.5%;
+    z-index: 30;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

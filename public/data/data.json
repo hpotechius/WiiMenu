@@ -1,0 +1,44 @@
+{
+    "audioFiles": {
+      "1": "audio/TwilightPrincessChannel.mp3",
+      "2": "audio/DiscChannel.mp3",
+      "3": "audio/ShopChannel.mp3",
+      "4": "audio/MiiChannel.mp3",
+      "5": "audio/OoT_title.mp3",
+      "6": "audio/MiiChannel.mp3",
+      "7": "audio/MiiChannel.mp3",
+      "8": "audio/MiiChannel.mp3",
+      "9": "audio/MiiChannel.mp3",
+      "10": "audio/MiiChannel.mp3",
+      "11": "audio/MiiChannel.mp3",
+      "12": "audio/MiiChannel.mp3"
+    },
+    "imageUrls": {
+      "1": "gif/TwilightPrincessTitleScreen.gif",
+      "2": "gif/MajorasMaskTitleScreen.gif",
+      "3": "gif/zelda.gif",
+      "4": "gif/WWTitleScreen-1.gif",
+      "5": "gif/OcarinaofTimeTitleScreen.gif",
+      "6": "gif/XyWT.gif",
+      "7": "gif/XyWT.gif",
+      "8": "gif/XyWT.gif",
+      "9": "gif/XyWT.gif",
+      "10": "gif/XyWT.gif",
+      "11": "gif/XyWT.gif",
+      "12": "gif/XyWT.gif"
+    },
+    "urls": {
+      "1": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "2": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "3": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "4": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "5": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "6": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "7": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "8": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "9": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "10": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "11": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "12": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A"
+    }
+  }

@@ -1,0 +1,17 @@
+.clock {
+    position: absolute;
+    color: #9b9b9b;
+    /* background-color: red; */
+    padding-top: 10px;
+    bottom: 12.5%;
+    font-size: 7vw;
+    left: 35vw;
+    width: 30vw;
+    height: 12.5%;
+    z-index: 30;
+    font-family: 'Digital-7 Mono', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,19 @@
+.svg_triangle_right {
+    position: absolute;
+    /* background-color: blue; */
+    top: calc(35%);
+    right: 0;
+    width: 2%;
+    height: 10%;
+    z-index: 10;
+}
+
+.svg_triangle_left {
+    position: absolute;
+    /* background-color: blue; */
+    top: calc(35%);
+    left: 0;
+    width: 2%;
+    height: 10%;
+    z-index: 10;
+}

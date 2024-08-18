@@ -1,0 +1,76 @@
+/* #image-button {
+  position: absolute;
+  bottom: 80px;
+  left: 75%;
+  width: 70px;
+  height: 70px;
+  background-image: url('images/audio.png');
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
+} */
+
+.frame {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    z-index: 5;
+}
+
+
+#background_stripes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(0deg, white 25%, #e3e3e3 25%);
+    background-size: 2px 7px;
+}
+
+#svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    z-index: -1;
+
+    /* background-color: blue; */
+}
+  
+
+#svg_buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 25%;
+    z-index: 10;
+}
+  
+#svg_buttons2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: 25%;
+    z-index: 10;
+}
+  
+#svg_buttons3 {
+    position: absolute;
+    /* background-color: blue; */
+    bottom: 0;
+    right: 20%;
+    width: 10%;
+    height: 25%;
+    z-index: 10;
+}

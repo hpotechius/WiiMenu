@@ -5,6 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  -webkit-text-size-adjust: 100%;
+  overflow: hidden;
+}
+
+html {
+  height: -webkit-fill-available;
+  background-color: black;
 }
 
 code {
