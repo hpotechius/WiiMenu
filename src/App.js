@@ -6,7 +6,7 @@ import Page from './components/Page';
 import Clock from './components/Clock';
 import DateComponent from './components/DateComponent';
 import FrameComponent from './components/FrameComponent';
-import idata from './data/data3.json';
+import idata from './data/data.json';
 import ArrowComponent from './components/ArrowComponent';
 import { useSwipeable } from 'react-swipeable';
 
@@ -21,6 +21,8 @@ function App() {
     const isScrolling = useRef(false);
     const [itemdata, setItemdata] = useState(idata);
     const [itemdata2, setItemdata2] = useState(idata);
+    const [itemdata3, setItemdata3] = useState(idata);
+    const [itemdata4, setItemdata4] = useState(idata);
 
 
     const handleSwipedLeft = () => {
@@ -47,11 +49,20 @@ function App() {
             .catch(error => console.error('Error fetching data.json:', error));
 
 
-        // Fetch data3.json
-        fetch(process.env.PUBLIC_URL + "/data/data3.json")
+        fetch(process.env.PUBLIC_URL + "/data/data2.json")
             .then(response => response.json())
             .then(data => setItemdata2(data))
+            .catch(error => console.error('Error fetching data2.json:', error));
+
+        fetch(process.env.PUBLIC_URL + "/data/data3.json")
+            .then(response => response.json())
+            .then(data => setItemdata3(data))
             .catch(error => console.error('Error fetching data3.json:', error));
+
+        fetch(process.env.PUBLIC_URL + "/data/data4.json")
+            .then(response => response.json())
+            .then(data => setItemdata4(data))
+            .catch(error => console.error('Error fetching data4.json:', error));
 
         window.addEventListener('wheel', handleWheel);
         return () => {
@@ -61,7 +72,7 @@ function App() {
 
 
     const handleWheel = (event) => {
-        event.preventDefault(); // Prevent default scrolling behavior
+        //event.preventDefault(); // Prevent default scrolling behavior
 
         if (isScrolling.current) {
             return; // Ignore wheel events if a page change is in progress
@@ -108,7 +119,6 @@ function App() {
         };
     }, []);
 
-
     return (
         <div className="App">
 
@@ -124,10 +134,10 @@ function App() {
                             // onMouseUp={handleMouseUp}
                             // onMouseLeave={handleMouseUp}
                             >
-                <Page id="page1" position={0} itemdata={itemdata} />
-                <Page id="page2" position={1} itemdata={itemdata2} />
-                <Page id="page3" position={2} itemdata={itemdata2} />
-                <Page id="page4" position={3} itemdata={itemdata2} />
+                <Page id="page1" position={0} idat={itemdata} />
+                <Page id="page2" position={1} idat={itemdata2} />
+                <Page id="page3" position={2} idat={itemdata3} />
+                <Page id="page4" position={3} idat={itemdata4} />
             </div>
 
 

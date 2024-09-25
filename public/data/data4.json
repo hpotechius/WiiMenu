@@ -1,0 +1,44 @@
+{
+    "audioFiles": {
+      "1": "audio/loading-main-menu-145077.mp3",
+      "2": "audio/loading-main-menu-145077.mp3",
+      "3": "audio/loading-main-menu-145077.mp3",
+      "4": "audio/loading-main-menu-145077.mp3",
+      "5": "audio/loading-main-menu-145077.mp3",
+      "6": "audio/loading-main-menu-145077.mp3",
+      "7": "audio/loading-main-menu-145077.mp3",
+      "8": "audio/loading-main-menu-145077.mp3",
+      "9": "audio/loading-main-menu-145077.mp3",
+      "10": "audio/loading-main-menu-145077.mp3",
+      "11": "audio/loading-main-menu-145077.mp3",
+      "12": "audio/loading-main-menu-145077.mp3"
+    },
+    "imageUrls": {
+      "1": "gif/XyWT.gif",
+      "2": "gif/XyWT.gif",
+      "3": "gif/XyWT.gif",
+      "4": "gif/XyWT.gif",
+      "5": "gif/XyWT.gif",
+      "6": "gif/XyWT.gif",
+      "7": "gif/XyWT.gif",
+      "8": "gif/XyWT.gif",
+      "9": "gif/XyWT.gif",
+      "10": "gif/XyWT.gif",
+      "11": "gif/XyWT.gif",
+      "12": "gif/XyWT.gif"
+    },
+    "urls": {
+      "1": "https://www.youtube.com/watch?v=VKMw2it8dQY&list=PL5MgY87YjMeUzrDAJUi2XNvfrEVZhDmWo&index=6",
+      "2": "https://www.youtube.com/watch?v=QN9--PIw6Sw&list=PL5MgY87YjMeUzrDAJUi2XNvfrEVZhDmWo&index=5",
+      "3": "https://www.youtube.com/watch?v=RFHziPQBbQc",
+      "4": "https://www.youtube.com/watch?v=R37IfQg0eTQ",
+      "5": "https://www.youtube.com/watch?v=ecLV3qmHKFY",
+      "6": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "7": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "8": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "9": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "10": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "11": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A",
+      "12": "https://www.youtube.com/watch?v=6Rf1wvZ2v1A"
+    }
+  }

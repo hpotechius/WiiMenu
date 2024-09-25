@@ -10,8 +10,8 @@ function Page(props) {
     const pageRef = useRef(null);
 
 
-    const imageUrls = props.itemdata.imageUrls;
-    const webUrls = props.itemdata.urls;
+    const imageUrls = props.idat.imageUrls;
+    const webUrls = props.idat.urls;
 
     const svgData = Array.from({ length: 12 }, (_, index) => ({
         id: index + 1,
@@ -21,16 +21,9 @@ function Page(props) {
 
     const handlePathClick = (id) => {
         setClickedId(id);
-        const audioFile = process.env.PUBLIC_URL + "/" + props.itemdata.audioFiles[id];
+        const audioFile = process.env.PUBLIC_URL + "/" + props.idat.audioFiles[id];
         audioMenuRef.current = new Audio(audioFile);
         audioMenuRef.current.play();
-
-        // Change the opacity of the element with id "background" to 1
-        // const backgroundElement = document.getElementById("background");
-        // if (backgroundElement) {
-        //     backgroundElement.style.opacity = "1";
-        //     backgroundElement.style.zIndex = "500";
-        // }
     };
 
 
@@ -64,7 +57,7 @@ function Page(props) {
                 <svg key={data.id} 
                     className={`svg_button ${clickedId === data.id ? 'maximized' : ''}`}
                     viewBox="-2 -2 104 54" 
-                    preserveAspectRatio="noxMidYmid meetne"
+                    // preserveAspectRatio="noxMidYmid meetne"
                     style={{
                         left: `${clickedId === data.id ? 0 : data.x}%`,
                         top: `${clickedId === data.id ? 0 : data.y}%`,
@@ -72,7 +65,7 @@ function Page(props) {
                         height: `${clickedId === data.id ? 100 : 100 / gridConfig.rows}%`
                     }}>
                     <defs>
-                        <pattern id={`gifPattern${data.id}`} patternUnits="userSpaceOnUse" width="100" height="100">
+                        <pattern id={`gifPattern${data.id + 12 * props.position}`} patternUnits="userSpaceOnUse" width="100" height="100">
                             <image href={process.env.PUBLIC_URL + "/" + imageUrls[data.id]} x="0" y="-25" width="100" height="100" />
                         </pattern>
                         <clipPath id="clipPath">
@@ -89,7 +82,7 @@ function Page(props) {
                                                 Q 0 10 0 10 C 0 0 0 0 10 0Z"
                                                 stroke={hoveredId === data.id && clickedId !== data.id ? '#34beed' : clickedId === data.id ? '#000000' : '#b4b4b4'} 
                                                 strokeWidth="1" 
-                                                fill={`url(#gifPattern${data.id})`}
+                                                fill={`url(#gifPattern${data.id + 12 * props.position})`}
                                                 opacity={imageUrls[data.id] === "gif/XyWT.gif" ? 0.5 : 1}
                                                 onMouseEnter={() => setHoveredId(data.id)}
                                                 onMouseLeave={() => setHoveredId(null)}
@@ -112,18 +105,16 @@ function Page(props) {
                     
                     <g transform="translate(20, 38) scale(0.8)" opacity="0.5" onClick={() => {setClickedId(null);  audioMenuRef.current.pause();
                        }} visibility={clickedId === data.id ? 'visible' : 'hidden'}>
-                        {/* <g transform="translate(20, 38) scale(0.8)" opacity="0.5" onClick={() => {setClickedId(null)
-                        isPlaying && playAudio(); audioMenuRef.current.pause(); }} visibility={clickedId === data.id ? 'visible' : 'hidden'}></g>  */}
                         <path d="M 0 0 H 25 V 10 H 0 Z" fill="lightgrey" stroke="#34beed" strokeWidth="1"/>
                         <circle cx="0" cy="5" r="5" fill="lightgrey" stroke="#34beed" strokeWidth="1"/>
                         <circle cx="25" cy="5" r="5" fill="lightgrey" stroke="#34beed" strokeWidth="1"/>
                         <path d="M 0 0 H 25 V 10 H 0 Z" fill="lightgrey"/>
                         <circle cx="0" cy="5" r="5" fill="lightgrey"/>
                         <circle cx="25" cy="5" r="5" fill="lightgrey"/>
-                        <text x="12" y="5" textAnchor="middle" dominantBaseline="middle" fill="black" fontSize="4" fontWeight="bold">Wii Menu</text> 
+                        <text x="12" y="5" textAnchor="middle" dominantBaseline="middle" fill="black" fontSize="4" fontWeight="bold">Menu</text> 
                     </g>
 
-                    <g transform="translate(60, 38) scale(0.8)" opacity="0.5" visibility={clickedId === data.id ? 'visible' : 'hidden'} onClick={() => window.open(webUrls[data.id], '_blank')}>
+                    <g transform="translate(60, 38) scale(0.8)" opacity="0.5" visibility={clickedId === data.id ? 'visible' : 'hidden'} onClick={() => window.location.href = webUrls[data.id]}>
                         <path d="M 0 0 H 25 V 10 H 0 Z" fill="lightgrey" stroke="#34beed" strokeWidth="1"/>
                         <circle cx="0" cy="5" r="5" fill="lightgrey" stroke="#34beed" strokeWidth="1"/>
                         <circle cx="25" cy="5" r="5" fill="lightgrey" stroke="#34beed" strokeWidth="1"/>

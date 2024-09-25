@@ -5,6 +5,14 @@ function FrameComponent(props) {
     const [isPlaying, setIsPlaying] = useState(false); // State to track audio play/pause
 
     const audioRef = useRef(null);
+
+    const handleClick = () => {
+      window.location.href = 'https://potechius.com'; // Ersetzen Sie dies durch die gewünschte URL
+    };
+
+    const handleClick2 = () => {
+      window.location.href = 'https://github.com/hpotechius/WiiMenu'; // Ersetzen Sie dies durch die gewünschte URL
+    };
   
     const playAudio = () => {
       console.log('play');
@@ -29,7 +37,7 @@ function FrameComponent(props) {
         <div className="frame">
             <div id="background_stripes"></div>
             <audio ref={audioRef}>
-                <source src={process.env.PUBLIC_URL + "/audio/WiiMenu.mp3"} type="audio/mpeg" />
+                <source src={process.env.PUBLIC_URL + "/audio/podcast-smooth-jazz-instrumental-music-225674.mp3"} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
 
@@ -47,13 +55,13 @@ function FrameComponent(props) {
                 filter="url(#shadow)"/>
             </svg>
 
-            <svg id="svg_buttons" viewBox="0 0 100 100" preserveAspectRatio="xMidYmid meet">
+            <svg id="svg_buttons" viewBox="0 0 100 100" preserveAspectRatio="xMidYmid meet" >
                 <circle cx="50" cy="50" r="40" fill="#d6d7dc" stroke="#b3b5bc" strokeWidth="2"/>
                 <path   d="M -100 10 Q 50 10 50 10 Q 50 90 50 90 Q -100 90 -100 90 Z"  fill="#d6d7dc" stroke="#b3b5bc" strokeWidth="2"/>
                 <circle cx="50" cy="50" r="39" fill="#d6d7dc"/>
                 <circle cx="48" cy="49" r="35" fill="#bdbec3"/>
-                <circle cx="45" cy="46" r="35" fill="#d6d7dc" stroke="#34beed" strokeWidth="2"/>
-                <text x="45" y="46" textAnchor="middle" dominantBaseline="middle" fill="#999999" fontSize="22" fontWeight="bold">Wii</text>
+                <circle id='svg_button_area' cx="45" cy="46" r="35" fill="#d6d7dc" stroke="#34beed" strokeWidth="2" onClick={handleClick}/>
+                <text x="45" y="46" textAnchor="middle" dominantBaseline="middle" fill="#999999" fontSize="18" fontWeight="bold" style={{ pointerEvents: 'none' }}>Home</text>
             </svg>
             
             <svg id="svg_buttons2" viewBox="0 0 100 100" preserveAspectRatio="xMidYmid meet">
@@ -61,8 +69,10 @@ function FrameComponent(props) {
                 <path   d="M 500 10 Q 50 10 50 10 Q 50 90 50 90 Q 500 90 500 90 Z"  fill="#d6d7dc" stroke="#b3b5bc" strokeWidth="2"/>
                 <circle cx="50" cy="50" r="39" fill="#d6d7dc"/>
                 <circle cx="48" cy="49" r="35" fill="#bdbec3"/>
-                <circle cx="45" cy="46" r="35" fill="#d6d7dc" stroke="#34beed" strokeWidth="2"/>
-                <text x="45" y="46" textAnchor="middle" dominantBaseline="middle" fill="#999999" fontSize="22" fontWeight="bold">Test</text>
+                <circle id='svg_button2_area'  cx="45" cy="46" r="35" fill="#d6d7dc" stroke="#34beed" strokeWidth="2"  onClick={handleClick2}/>
+
+                <image href={process.env.PUBLIC_URL + "/images/github-mark.png"} x="25" y="25" width="40" height="40" style={{ pointerEvents: 'none' }}/>
+                {/* <text x="45" y="46" textAnchor="middle" dominantBaseline="middle" fill="#999999" fontSize="18" fontWeight="bold" style={{ pointerEvents: 'none' }}>Test</text> */}
             </svg>
 
 
